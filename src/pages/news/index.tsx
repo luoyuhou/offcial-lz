@@ -1,12 +1,12 @@
 import React from "react";
-import TopBar from "../../modules/menu/top-bar";
+import RootLayout from "../../modules/layout";
 
 export default function News() {
   return (
-    <TopBar>
+    <RootLayout>
       <section>
         <div>News Page</div>
       </section>
-    </TopBar>
+    </RootLayout>
   );
 }

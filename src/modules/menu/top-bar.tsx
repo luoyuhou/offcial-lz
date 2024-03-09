@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import RootLayout from "../layout";
 
 const navigation = [
   { name: "首页", href: "/" },
@@ -13,13 +12,13 @@ const navigation = [
   { name: "关于我们", href: "/about-us" },
 ];
 
-export default function TopBar({ children }: { children: React.ReactNode }) {
+export default function TopBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <RootLayout>
+    <div className="fixed w-full z-50">
       <div className="bg-white">
-        <header className="inset-x-0 top-0 z-50">
+        <header className="inset-x-0 top-0">
           <nav
             className="flex items-center justify-between p-6 lg:px-8"
             aria-label="Global"
@@ -116,9 +115,7 @@ export default function TopBar({ children }: { children: React.ReactNode }) {
             </Dialog.Panel>
           </Dialog>
         </header>
-
-        {children}
       </div>
-    </RootLayout>
+    </div>
   );
 }

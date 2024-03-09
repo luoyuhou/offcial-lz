@@ -1,11 +1,12 @@
 import React from "react";
 import { Inter } from "next/font/google";
+import TopBar from "../menu/top-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 function Copyright() {
   return (
-    <div className="absolute w-full bottom-0">
+    <div className="w-full mt-4 pb-2">
       <div className="text-center">
         {"Copyright © "}
         <a href="/public">xxx.com</a> {new Date().getFullYear()} | {}
@@ -30,6 +31,7 @@ export default function RootLayout({
       />
 
       <div className="min-h-screen bg-violet-100">
+        <TopBar />
         {children}
         <Copyright />
       </div>
