@@ -182,7 +182,7 @@ export default function Home() {
           <div className="grid grid-cols-7 mt-10">
             <div className="bg-white col-start-2 text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -194,7 +194,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -206,7 +206,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -230,7 +230,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -244,7 +244,7 @@ export default function Home() {
             {/* tow row */}
             <div className="bg-white col-start-2 text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -256,7 +256,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -280,7 +280,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -292,7 +292,7 @@ export default function Home() {
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
               <a href="/" style={{ width: "200px" }} className="hover:shadow">
-                <div className="flex justify-center">
+                <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
                     className="h-16 w-16"
@@ -330,10 +330,7 @@ export default function Home() {
             <div>
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6 rounded-full">
                     <BookmarkIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -346,10 +343,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6  rounded-full">
                     <FlagIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -362,10 +356,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6  rounded-full">
                     <HandThumbUpIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -378,10 +369,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6 rounded-full">
                     <UserGroupIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -394,10 +382,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6 rounded-full">
                     <TrophyIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -410,10 +395,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6 rounded-full">
                     <CursorArrowRaysIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -426,10 +408,7 @@ export default function Home() {
 
               <a href="/">
                 <div className="inline-block m-2">
-                  <div
-                    style={{ borderRadius: "50%" }}
-                    className="inline-block border border-blue-900 p-6"
-                  >
+                  <div className="inline-block border border-blue-900 p-6 rounded-full">
                     <PhoneArrowUpRightIcon
                       color="darkblue"
                       className="h-12 w-12"
@@ -506,8 +485,7 @@ export default function Home() {
               {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
               <a
                 href="/"
-                className="border border-gray-500 hover:bg-blue-700"
-                style={{ borderRadius: "50%" }}
+                className="border border-gray-500 hover:bg-blue-700 rounded-full"
               >
                 <ArrowRightIcon
                   className="h-6 w-6 hover:text-white"
@@ -544,8 +522,7 @@ export default function Home() {
               {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
               <a
                 href="/"
-                className="border border-gray-500 hover:bg-blue-700"
-                style={{ borderRadius: "50%" }}
+                className="border border-gray-500 hover:bg-blue-700 rounded-full"
               >
                 <ArrowRightIcon
                   className="h-6 w-6 hover:text-white"
@@ -582,8 +559,7 @@ export default function Home() {
               {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
               <a
                 href="/"
-                className="border border-gray-500 hover:bg-blue-700"
-                style={{ borderRadius: "50%" }}
+                className="border border-gray-500 hover:bg-blue-700 rounded-full"
               >
                 <ArrowRightIcon
                   className="h-6 w-6 hover:text-white"
@@ -602,12 +578,13 @@ export default function Home() {
         <a href="/">
           <div
             className="absolute hover:text-white"
-            style={{ top: "-40px", left: "50%" }}
+            style={{
+              top: "-40px",
+              left: "50%",
+              transform: "translateX(-40px)",
+            }}
           >
-            <div
-              style={{ borderRadius: "100%", height: "80px", width: "80px" }}
-              className="border border-gray-300 bg-gray-100 p-8 flex justify-center items-center hover:bg-blue-700"
-            >
+            <div className="border border-gray-300 bg-gray-100 p-8 flex justify-center items-center hover:bg-blue-700 rounded-full h-[80px] w-[80px]">
               <span className="text-3xl">+</span>
             </div>
           </div>
