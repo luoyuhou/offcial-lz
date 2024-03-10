@@ -11,13 +11,12 @@ import {
   BookmarkIcon,
   CursorArrowRaysIcon,
   FlagIcon,
-  HandThumbDownIcon,
   HandThumbUpIcon,
   PhoneArrowUpRightIcon,
-  ScaleIcon,
   TrophyIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+import { MiniLogo } from "src/modules/layout/Logo";
 import Carousel from "../modules/components/carousel";
 import RootLayout from "../modules/layout";
 
@@ -320,8 +319,11 @@ export default function Home() {
           />
           <div className="grid grid-cols-7">
             <p />
-            <p className="col-span-5">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本公司是国内知名的从事战略管理、组织管理、运营管理、人力资源管理、企业文化等管理咨询和培训的综合性、一体化、全价值链知识服务平台，
+            <p className="col-span-5 relative">
+              <span style={{ top: "-12px" }} className="relative">
+                <MiniLogo />
+              </span>
+              &nbsp;公司是国内知名的从事战略管理、组织管理、运营管理、人力资源管理、企业文化等管理咨询和培训的综合性、一体化、全价值链知识服务平台，
               致力于为各类组织创造客户价值提供管理创新、工具应用和落地实施全程赋能，立足大湾区，放眼全中国，总部设在深圳，下属多家行业专业咨询子公司，在北京、上海、广州等多地设有分支机构。迄今为止已经为近万家企业提供了管理咨询与培训服务，享誉粤港澳大湾区，被评为全国50大机构。
             </p>
           </div>
@@ -588,30 +590,6 @@ export default function Home() {
               <span className="text-3xl">+</span>
             </div>
           </div>
-        </a>
-      </section>
-
-      <section
-        className="mt-10 text-white bg-gray-500 flex justify-center items-center"
-        style={{ height: "120px" }}
-      >
-        <a href="/" className="m-2">
-          国家认证认可监督管理委员会
-        </a>
-        <a href="/" className="m-2">
-          国务院国有资产监督管理委员会
-        </a>
-        <a href="/" className="m-2">
-          中国标准化协会
-        </a>
-        <a href="/" className="m-2">
-          中国企业联合会
-        </a>
-        <a href="/" className="m-2">
-          深圳市市场监督管理局
-        </a>
-        <a href="/" className="m-2">
-          中国经济大讲堂
         </a>
       </section>
     </RootLayout>
