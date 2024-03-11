@@ -5,13 +5,14 @@ import {
   StarIcon,
   TagIcon,
 } from "@heroicons/react/24/solid";
+import { ECompanyName } from "src/const";
 
 const items: { index: string; title: string; description: string[] }[] = [
   {
     index: "一",
     title: "体系认证",
     description: [
-      "9001、14001、45001、50430、22000、HACCP、27001、20000、13485、HSE、15848阀门、11607医疗器械包装、15189医学实验室、（CCS)船级社、企业社会责任、诚信管理、国军标、汽车16949、航空质量管理、能源管理体系及各类体系认证。",
+      "9001、14001、45001、50430、22000、HACCP、27001、20000、13485、HSE、15848阀门、11607医疗器械包装、15189医学实验室、（CCS)船级社、企业社会责任、诚信管理、国军标、汽车16949、航空质量管理、能源管理体系及各类体系认证",
     ],
   },
   {
@@ -32,8 +33,8 @@ const items: { index: string; title: string; description: string[] }[] = [
     index: "四",
     title: "检测出口业务类",
     description: [
-      "中国CCC、CQC、美国FCC、巴西INMETRO、日本TELEC、CPC、EAC、GOTS、BSCI、KC认证、FSC自由销售证书、FDA、UL、TUV、GS、PSE",
-      "欧盟：CE、ROHS、REACH",
+      "中国CCC、CQC、美国FCC、巴西INMETRO、日本TELEC、CPC、EAC、GOTS、BSCI、KC认证、FSC自由销售证书、FDA、UL、TUV、GS、PSE。",
+      "欧盟：CE、ROHS、REACH。",
       "沙特：SASO，SFDA等各类检测出口认证。",
     ],
   },
@@ -41,14 +42,14 @@ const items: { index: string; title: string; description: string[] }[] = [
     index: "五",
     title: "信息技术涉密类",
     description: [
-      "武器装备保密资格、武器装备生产许可、涉密信息系统集成、秘密载体印刷资质、ITSS、CCRC、CMMI、CSMM、DCMM、SPCA、CCIA。",
+      "武器装备保密资格、武器装备生产许可、涉密信息系统集成、秘密载体印刷资质、GJB5000军用软件能力成熟度、ITSS、CCRC、CMMI、CSMM、DCMM、SPCA、CCIA。",
     ],
   },
   {
     index: "六",
-    title: "企业信用资质：(各种荣誉、服务资质证书)",
+    title: "企业信用和等级资质：(各种荣誉、服务资质证书)",
     description: [
-      "全国AAA信用等级证书、售后五星，保安服务，物业管理、园林绿化、消杀、病媒生物防治、垃圾处理、再生资源、安防设计施工、先进单位、优秀品牌、企业十强等.",
+      "全国AAA信用等级证书、售后五星，保安服务，物业管理、园林绿化、消杀、病媒生物防治、垃圾处理、再生资源、先进单位、优秀品牌、企业十强、绿色供应链承诺示范单位等.",
     ],
   },
 ];
@@ -84,16 +85,18 @@ function AboutUs() {
               </p>
               <p style={{ lineHeight: "2rem" }} className="m-4">
                 <span>
-                  {" "}
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市乐湛企业服务有限公司是一家具有深厚专业积淀和持续创新能力的咨询机构，为客户提供了管理咨询、认证咨询以及培训服务，业务范围包含&nbsp;
+                  <span className="ml-8 mr-1 text-lime-500">
+                    {ECompanyName.full}
+                  </span>
+                  是一家具有深厚专业积淀和持续创新能力的咨询机构，为客户提供了管理咨询、认证咨询以及培训服务，业务范围包含&nbsp;
                 </span>
                 {items.map(({ title }, index) => (
-                  <>
-                    <a key={title} href={`#${title}`} className="text-blue-700">
+                  <span key={`nav-var-${title}`}>
+                    <a href={`#${title}`} className="text-blue-700">
                       {title}
                     </a>
                     {index < items.length - 1 ? <span>、</span> : null}
-                  </>
+                  </span>
                 ))}
                 &nbsp;等，客户包括众多行业的优秀企业，赢得了良好的口碑和信誉。
               </p>
@@ -123,12 +126,15 @@ function AboutUs() {
                     {
                       index: "七",
                       title:
-                        "其他:药品GMP,医疗器械代理注册，一站式CRO，测量设备校准等",
+                        "其他:医疗器械GMP、代理注册、一站式CRO，生产许可证、进网许可证、建筑施工资质、全国工业产品生产许可证、医疗器械备案与许可、测量设备计量校准等",
                       description: ["..."],
                     },
                   ])
                   .map(({ index, title, description }) => (
-                    <div key={title} className="p-4 sm:px-0 my-1 bg-gray-100">
+                    <div
+                      key={`item-title-${title}`}
+                      className="p-4 my-1 bg-gray-100 anchor"
+                    >
                       <h3
                         id={title}
                         className="text-base font-semibold leading-7 text-blue-700"
@@ -164,7 +170,10 @@ function AboutUs() {
               {strengths.map(({ keyword, description }) => (
                 <div key={keyword}>
                   <div className="my-4 flex items-center">
-                    <div className="h-[60px] w-[60px] border border-dashed font-bold border-gray-400 rounded-full flex justify-center items-center">
+                    <div
+                      style={{ minWidth: "60px" }}
+                      className="h-[60px] w-[60px] border border-dashed font-bold border-gray-400 rounded-full flex justify-center items-center"
+                    >
                       {keyword}
                     </div>
                     <p className="ml-5">{description}</p>

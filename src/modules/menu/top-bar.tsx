@@ -13,7 +13,13 @@ const navigation = [
   { name: "关于我们", href: "/about-us" },
 ];
 
-export default function TopBar() {
+function checkPathnameActive(s: string, p: string) {
+  const pattern = /-(.*)[?#]/;
+  const arr = p.split(pattern);
+  return s === arr?.[0];
+}
+
+export default function TopBar({ pathname }: { pathname: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -46,15 +52,18 @@ export default function TopBar() {
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700"
-                >
-                  {item.name}
-                </a>
-              ))}
+              {navigation.map((item) => {
+                const active = checkPathnameActive(item.href, pathname);
+                return (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={`text-sm font-semibold leading-6 hover:text-blue-700 ${active ? "text-blue-700" : "text-gray-900"}`}
+                  >
+                    {item.name}
+                  </a>
+                );
+              })}
             </div>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
               <button
@@ -92,15 +101,18 @@ export default function TopBar() {
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </a>
-                    ))}
+                    {navigation.map((item) => {
+                      const active = checkPathnameActive(item.href, pathname);
+                      return (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 ${active ? "text-blue-700" : "text-gray-900"}`}
+                        >
+                          {item.name}
+                        </a>
+                      );
+                    })}
                   </div>
                   <div className="py-6">
                     <button

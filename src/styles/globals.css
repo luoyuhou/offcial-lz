@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+html{
+  scroll-padding-top: 100px;
+}

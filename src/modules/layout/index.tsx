@@ -1,6 +1,7 @@
 import React from "react";
 import { Inter } from "next/font/google";
 import Footer from "src/modules/layout/Footer";
+import { useRouter } from "next/router";
 import TopBar from "../menu/top-bar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,20 +25,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { pathname } = useRouter();
+
   return (
     <main className={`${inter.className}`}>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
-        rel="stylesheet"
-      />
+      {/* <link */}
+      {/*  href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" */}
+      {/*  rel="stylesheet" */}
+      {/* /> */}
 
       <div className="min-h-screen bg-violet-100">
-        <TopBar />
+        <TopBar pathname={pathname} />
         <div style={{ paddingTop: "92px" }}>{children}</div>
         <Footer />
         <Copyright />
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" />
+      {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" /> */}
     </main>
   );
 }
