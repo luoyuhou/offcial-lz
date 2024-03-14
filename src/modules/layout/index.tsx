@@ -2,6 +2,7 @@ import React from "react";
 import { Inter } from "next/font/google";
 import Footer from "src/modules/layout/Footer";
 import { useRouter } from "next/router";
+import Head from "next/head";
 import TopBar from "../menu/top-bar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,14 +22,19 @@ function Copyright() {
 }
 
 export default function RootLayout({
+  title,
   children,
 }: {
+  title: string;
   children: React.ReactNode;
 }) {
   const { pathname } = useRouter();
 
   return (
     <main className={`${inter.className}`}>
+      <Head>
+        <title>{title}</title>
+      </Head>
       {/* <link */}
       {/*  href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" */}
       {/*  rel="stylesheet" */}

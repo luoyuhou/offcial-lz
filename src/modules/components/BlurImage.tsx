@@ -15,9 +15,9 @@ export default function BlurImage({ image, alt }: BlurImageProps) {
         alt={alt}
         src={image}
         fill
-        objectFit="cover"
+        // objectFit="cover"
         className={`
-          duration-700 ease-in-out group-hover:opacity-75 ovverflow-hidden w-screen
+          duration-700 ease-in-out group-hover:opacity-75 ovverflow-hidden w-screen py-4 bg-white
           ${
             isLoading
               ? "scale-110 blur-2xl grayscale"

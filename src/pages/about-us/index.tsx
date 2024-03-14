@@ -6,6 +6,9 @@ import {
   TagIcon,
 } from "@heroicons/react/24/solid";
 import { ECompanyName } from "src/const";
+import SideBar from "src/modules/menu/side-bar";
+import { useRouter } from "next/router";
+import { ABOUT_US_MENU } from "src/const/about-us.const";
 
 const items: { index: string; title: string; description: string[] }[] = [
   {
@@ -71,119 +74,124 @@ const strengths: { keyword: string; description: string }[] = [
 ];
 
 function AboutUs() {
+  const { asPath } = useRouter();
+
   return (
-    <RootLayout>
-      <div className="w-full">
-        <div className="bg-white rounded-s m-10">
-          <div className="p-10">
-            <div className="">
-              <p className="flex items-center">
-                <span className="text-3xl">公司简介</span>
-                <span className="ml-2">
-                  <TagIcon className="h-8 w-8" color="darkblue" />
-                </span>
-              </p>
-              <p style={{ lineHeight: "2rem" }} className="m-4">
-                <span>
-                  <span className="ml-8 mr-1 text-lime-500">
-                    {ECompanyName.full}
-                  </span>
-                  是一家具有深厚专业积淀和持续创新能力的咨询机构，为客户提供了管理咨询、认证咨询以及培训服务，业务范围包含&nbsp;
-                </span>
-                {items.map(({ title }, index) => (
-                  <span key={`nav-var-${title}`}>
-                    <a href={`#${title}`} className="text-blue-700">
-                      {title}
-                    </a>
-                    {index < items.length - 1 ? <span>、</span> : null}
-                  </span>
-                ))}
-                &nbsp;等，客户包括众多行业的优秀企业，赢得了良好的口碑和信誉。
-              </p>
-
+    <RootLayout title="关于我们">
+      <div className="min-h-dvh">
+        <div className="lg:ml-[300px]">
+          <div className="bg-white rounded-s m-10">
+            <div className="p-10">
               <div className="">
-                <img
-                  style={{ maxHeight: "600px" }}
-                  src="/assets/images/cooperate.jpg"
-                  alt="合作"
-                  className="w-full"
-                />
-              </div>
-              <br />
-            </div>
-            <hr />
-            <div className="mt-10">
-              <p className="flex">
-                <span className="text-3xl">业务范围</span>
-                <span className="ml-2">
-                  <Square3Stack3DIcon className="h-8 w-8" color="darkblue" />
-                </span>
-              </p>
-
-              <div className="mt-4">
-                {items
-                  .concat([
-                    {
-                      index: "七",
-                      title:
-                        "其他:医疗器械GMP、代理注册、一站式CRO，生产许可证、进网许可证、建筑施工资质、全国工业产品生产许可证、医疗器械备案与许可、测量设备计量校准等",
-                      description: ["..."],
-                    },
-                  ])
-                  .map(({ index, title, description }) => (
-                    <div
-                      key={`item-title-${title}`}
-                      className="p-4 my-1 bg-gray-100 anchor"
-                    >
-                      <h3
-                        id={title}
-                        className="text-base font-semibold leading-7 text-blue-700"
-                      >
-                        {index}、{title}
-                      </h3>
-                      {description.map((s) => (
-                        <p
-                          key={s.slice(0, 20)}
-                          className="mt-1 text-sm leading-6 text-gray-500"
-                        >
-                          {s}
-                        </p>
-                      ))}
-                    </div>
-                  ))}
-              </div>
-            </div>
-
-            <hr className="mt-4" />
-
-            <div className="mt-10">
-              <div>
                 <p className="flex items-center">
-                  <span className="text-3xl">公司优势</span>
+                  <span className="text-3xl">公司简介</span>
                   <span className="ml-2">
-                    <StarIcon className="h-8 w-8" color="darkblue" />
+                    <TagIcon className="h-8 w-8" color="darkblue" />
                   </span>
                 </p>
-              </div>
-            </div>
-            <div className="mt-8">
-              {strengths.map(({ keyword, description }) => (
-                <div key={keyword}>
-                  <div className="my-4 flex items-center">
-                    <div
-                      style={{ minWidth: "60px" }}
-                      className="h-[60px] w-[60px] border border-dashed font-bold border-gray-400 rounded-full flex justify-center items-center"
-                    >
-                      {keyword}
-                    </div>
-                    <p className="ml-5">{description}</p>
-                  </div>
-                  <hr />
+                <p style={{ lineHeight: "2rem" }} className="m-4">
+                  <span>
+                    <span className="ml-8 mr-1 text-lime-500">
+                      {ECompanyName.full}
+                    </span>
+                    是一家具有深厚专业积淀和持续创新能力的咨询机构，为客户提供了管理咨询、认证咨询以及培训服务，业务范围包含&nbsp;
+                  </span>
+                  {items.map(({ title }, index) => (
+                    <span key={`nav-var-${title}`}>
+                      <a href={`#${title}`} className="text-blue-700">
+                        {title}
+                      </a>
+                      {index < items.length - 1 ? <span>、</span> : null}
+                    </span>
+                  ))}
+                  &nbsp;等，客户包括众多行业的优秀企业，赢得了良好的口碑和信誉。
+                </p>
+
+                <div className="">
+                  <img
+                    style={{ maxHeight: "600px" }}
+                    src="/assets/images/cooperate.jpg"
+                    alt="合作"
+                    className="w-full"
+                  />
                 </div>
-              ))}
+                <br />
+              </div>
+              <hr />
+              <div className="mt-10">
+                <p className="flex">
+                  <span className="text-3xl">业务范围</span>
+                  <span className="ml-2">
+                    <Square3Stack3DIcon className="h-8 w-8" color="darkblue" />
+                  </span>
+                </p>
+
+                <div className="mt-4">
+                  {items
+                    .concat([
+                      {
+                        index: "七",
+                        title:
+                          "其他:医疗器械GMP、代理注册、一站式CRO，生产许可证、进网许可证、建筑施工资质、全国工业产品生产许可证、医疗器械备案与许可、测量设备计量校准等",
+                        description: ["..."],
+                      },
+                    ])
+                    .map(({ index, title, description }) => (
+                      <div
+                        key={`item-title-${title}`}
+                        className="p-4 my-1 bg-gray-100 anchor"
+                      >
+                        <h3
+                          id={title}
+                          className="text-base font-semibold leading-7 text-blue-700"
+                        >
+                          {index}、{title}
+                        </h3>
+                        {description.map((s) => (
+                          <p
+                            key={s.slice(0, 20)}
+                            className="mt-1 text-sm leading-6 text-gray-500"
+                          >
+                            {s}
+                          </p>
+                        ))}
+                      </div>
+                    ))}
+                </div>
+              </div>
+
+              <hr className="mt-4" />
+
+              <div className="mt-10">
+                <div>
+                  <p className="flex items-center">
+                    <span className="text-3xl">公司优势</span>
+                    <span className="ml-2">
+                      <StarIcon className="h-8 w-8" color="darkblue" />
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8">
+                {strengths.map(({ keyword, description }) => (
+                  <div key={keyword}>
+                    <div className="my-4 flex items-center">
+                      <div
+                        style={{ minWidth: "60px" }}
+                        className="h-[60px] w-[60px] border border-dashed font-bold border-gray-400 rounded-full flex justify-center items-center"
+                      >
+                        {keyword}
+                      </div>
+                      <p className="ml-5">{description}</p>
+                    </div>
+                    <hr />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+        <SideBar menu={ABOUT_US_MENU} category="关于我们" asPath={asPath} />
       </div>
     </RootLayout>
   );

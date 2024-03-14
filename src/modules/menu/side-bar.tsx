@@ -14,9 +14,9 @@ export default function SideBar(
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="fixed w-full z-10">
+    <div className="fixed z-10">
       <div className="bg-white">
-        <header className="fixed inset-x-0 bottom-40 lg:inset-y-1/4">
+        <header className="fixed lg:w-[300px] bottom-40 lg:inset-y-1/4">
           <nav
             className="items-center justify-between px-4 py-6 lg:px-8"
             aria-label="Global"

@@ -8,10 +8,10 @@ export default function ConsultItem() {
   const { asPath } = useRouter();
 
   return (
-    <RootLayout>
+    <RootLayout title="管理咨询">
       <div className="min-h-dvh">
         <SideBar menu={CONSULT_MENU} category="管理咨询" asPath={asPath} />
-        <div>Consult Page</div>
+        <div>管理咨询</div>
       </div>
     </RootLayout>
   );
