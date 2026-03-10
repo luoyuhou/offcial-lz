@@ -1,11 +1,8 @@
 import React from "react";
-import { Inter } from "next/font/google";
 import Footer from "src/modules/layout/Footer";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import TopBar from "../menu/top-bar";
-
-const inter = Inter({ subsets: ["latin"] });
 
 function Copyright() {
   return (
@@ -31,7 +28,7 @@ export default function RootLayout({
   const { pathname } = useRouter();
 
   return (
-    <main className={`${inter.className}`}>
+    <main>
       <Head>
         <title>{title}</title>
       </Head>
