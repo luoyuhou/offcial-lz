@@ -1,0 +1,4 @@
+node_modules
+.next
+dist
+scripts/build-pkg.js
