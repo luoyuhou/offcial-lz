@@ -66,12 +66,8 @@ export default function Home() {
           <br />
           <br />
 
-          <div className="flex items-center justify-center">
-            <a
-              href="/"
-              style={{ width: "300px" }}
-              className="hover:shadow pt-3 pb-3"
-            >
+          <div className="flex items-center justify-center flex-wrap">
+            <a href="/" className="hover:shadow pt-3 pb-3 w-full sm:w-[300px]">
               <div className="flex justify-center">
                 <ChatBubbleLeftRightIcon
                   color="darkblue"
@@ -82,11 +78,7 @@ export default function Home() {
               <div className="mt-2">咨询管理</div>
               <div className="text-orange-400 mt-2">Management Consulting</div>
             </a>
-            <a
-              href="/"
-              style={{ width: "300px" }}
-              className="hover:shadow pt-3 pb-3"
-            >
+            <a href="/" className="hover:shadow pt-3 pb-3 w-full sm:w-[300px]">
               <div className="flex justify-center">
                 <AcademicCapIcon
                   color="darkblue"
@@ -97,11 +89,8 @@ export default function Home() {
               <div className="mt-2">标准体系/ISO认证咨询</div>
               <div className="text-orange-400 mt-2">ISO certification</div>
             </a>
-            <a
-              href="/"
-              style={{ width: "300px" }}
-              className="hover:shadow pt-3 pb-3"
-            >
+
+            <a href="/" className="hover:shadow pt-3 pb-3 w-full sm:w-[300px]">
               <div className="flex justify-center">
                 <Cog8ToothIcon
                   color="darkblue"
@@ -114,11 +103,7 @@ export default function Home() {
                 Information consultation
               </div>
             </a>
-            <a
-              href="/"
-              style={{ width: "300px" }}
-              className="hover:shadow pt-3 pb-3"
-            >
+            <a href="/" className="hover:shadow pt-3 pb-3 w-full sm:w-[300px]">
               <div className="flex justify-center">
                 <BookOpenIcon
                   color="darkblue"
@@ -131,11 +116,7 @@ export default function Home() {
                 Low carbon technology services
               </div>
             </a>
-            <a
-              href="/"
-              style={{ width: "300px" }}
-              className="hover:shadow pt-3 pb-3"
-            >
+            <a href="/" className="hover:shadow pt-3 pb-3 w-full sm:w-[300px]">
               <div className="flex justify-center">
                 <NewspaperIcon
                   color="darkblue"
@@ -151,9 +132,8 @@ export default function Home() {
       </section>
 
       <section
-        className="mt-10"
+        className="mt-10 min-h-[700px] bg-cover bg-center"
         style={{
-          height: "700px",
           backgroundImage: "url('/assets/background/index-page-bg.png')",
         }}
       >
@@ -178,9 +158,9 @@ export default function Home() {
           <div className="text-orange-300 text-center mt-2">
             我们已经为9000多家企业提供了全方位咨询与培训服务
           </div>
-          <div className="grid grid-cols-7 mt-10">
-            <div className="bg-white col-start-2 text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+          <div className="grid grid-cols-2 md:grid-cols-7 mt-10">
+            <div className="bg-white col-start-auto md:col-start-2 text-center pb-8 pt-8 m-2">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -192,7 +172,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -204,7 +184,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -216,7 +196,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -228,7 +208,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -241,8 +221,8 @@ export default function Home() {
             </div>
 
             {/* tow row */}
-            <div className="bg-white col-start-2 text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+            <div className="bg-white col-start-auto md:col-start-2 text-center pb-8 pt-8 m-2">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -254,7 +234,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -266,7 +246,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -278,7 +258,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -290,7 +270,7 @@ export default function Home() {
               </a>
             </div>
             <div className="bg-white text-center pb-8 pt-8 m-2">
-              <a href="/" style={{ width: "200px" }} className="hover:shadow">
+              <a href="/" className="hover:shadow block">
                 <div className="hidden lg:flex justify-center">
                   <NewspaperIcon
                     color="darkblue"
@@ -317,7 +297,7 @@ export default function Home() {
               borderBottom: "2px solid orange",
             }}
           />
-          <div className="grid grid-cols-7">
+          <div className="grid grid-cols-1 md:grid-cols-7">
             <p />
             <p className="col-span-5 relative">
               <span style={{ top: "-12px" }} className="relative">
@@ -461,15 +441,12 @@ export default function Home() {
         </div>
 
         <div className="text-center mt-5">
-          <div
-            className="inline-block m-2 bg-white p-1"
-            style={{ width: "400px", height: "380px" }}
-          >
+          <div className="inline-block m-2 bg-white p-1 w-full max-w-[400px]">
             <div className="text-center">
               <a href="/">
                 <div
-                  className="hover:shadow shadow-sky-400 border border-gray-400"
-                  style={{ width: "390px", height: "220px" }}
+                  className="hover:shadow shadow-sky-400 border border-gray-400 w-full"
+                  style={{ height: "220px" }}
                 >
                   图片1
                 </div>
@@ -477,11 +454,13 @@ export default function Home() {
             </div>
             <div className="text-xl mt-2">
               <a href="/" className="hover:text-blue-600">
-                某烟草商业企业顺利通过“AAA”级标准化...
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                某烟草商业企业顺利通过"AAA"级标准化...
               </a>
             </div>
             <div className="mt-2">
-              近日，某烟草商业企业顺利取得“标准化良好行为企业AAA证书”。
+              {/* eslint-disable-next-line react/no-unescaped-entities */}
+              近日，某烟草商业企业顺利取得"标准化良好行为企业AAA证书"。
             </div>
             <div className="flex justify-between items-center mt-5">
               {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
@@ -498,15 +477,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="inline-block m-2 bg-white p-1"
-            style={{ width: "400px", height: "380px" }}
-          >
+          <div className="inline-block m-2 bg-white p-1 w-full max-w-[400px]">
             <div className="text-center">
               <a href="/">
                 <div
-                  className="hover:shadow shadow-sky-400 border border-gray-400"
-                  style={{ width: "390px", height: "220px" }}
+                  className="hover:shadow shadow-sky-400 border border-gray-400 w-full"
+                  style={{ height: "220px" }}
                 >
                   图片2
                 </div>
@@ -514,7 +490,8 @@ export default function Home() {
             </div>
             <div className="text-xl mt-2">
               <a href="/" className="hover:text-blue-600">
-                广西烟草公司荣获“标准化良好行为企业...
+                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                广西烟草公司荣获"标准化良好行为企业"...
               </a>
             </div>
             <div className="mt-2">
@@ -535,15 +512,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className="inline-block m-2 bg-white p-1"
-            style={{ width: "400px", height: "380px" }}
-          >
+          <div className="inline-block m-2 bg-white p-1 w-full max-w-[400px]">
             <div className="text-center">
               <a href="/">
                 <div
-                  className="hover:shadow shadow-sky-400 border border-gray-400"
-                  style={{ width: "390px", height: "220px" }}
+                  className="hover:shadow shadow-sky-400 border border-gray-400 w-full"
+                  style={{ height: "220px" }}
                 >
                   图片3
                 </div>

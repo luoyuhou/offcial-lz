@@ -32,10 +32,6 @@ export default function RootLayout({
       <Head>
         <title>{title}</title>
       </Head>
-      {/* <link */}
-      {/*  href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" */}
-      {/*  rel="stylesheet" */}
-      {/* /> */}
 
       <div className="min-h-screen bg-violet-100">
         <TopBar pathname={pathname} />
@@ -43,7 +39,6 @@ export default function RootLayout({
         <Footer />
         <Copyright />
       </div>
-      {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js" /> */}
     </main>
   );
 }

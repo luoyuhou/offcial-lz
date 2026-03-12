@@ -35,3 +35,8 @@ body {
 html{
   scroll-padding-top: 100px;
 }
+
+/* 防止移动端出现横向滚动条 */
+html, body {
+  overflow-x: hidden;
+}
